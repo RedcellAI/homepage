@@ -2,7 +2,6 @@
   "mimeTypes": {
     ".html": "text/html"
   },
-{
   "routes": [
     {
       "route": "/google*.html",
