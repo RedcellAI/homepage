@@ -5,21 +5,32 @@
   "routes": [
     {
       "route": "/google136ff232786746ae.html",
+      "allowedRoles": ["anonymous"],
       "headers": {
-        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate"
+        "Cache-Control": "no-store, must-revalidate"
       }
     },
     {
       "route": "/robots.txt",
+      "allowedRoles": ["anonymous"],
       "headers": {
         "Cache-Control": "no-store, must-revalidate"
       }
     },
     {
       "route": "/sitemap.xml",
+      "allowedRoles": ["anonymous"],
       "headers": {
         "Cache-Control": "no-store, must-revalidate"
       }
     }
-  ]
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/google*.html",
+      "/robots.txt",
+      "/sitemap.xml"
+    ]
+  }
 }
