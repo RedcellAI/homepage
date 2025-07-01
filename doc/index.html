@@ -15,9 +15,7 @@
 <meta content="https://www.redcell-ai.com/images/logo_2025.png" property="og:image"/>
 <meta content="https://www.redcell-ai.com/" property="og:url"/>
 <meta content="website" property="og:type"/>
-<!-- ✅ Canonical URL -->
-<link href="https://www.redcell-ai.com/" rel="canonical"/>
-<a href="/robots.txt" target="_blank">robots.txt 테스트</a>
+
 <!-- Responsive Base Styles -->
 <style>
     /* Container */
@@ -328,9 +326,13 @@
 <!-- Scroll-to-Top Button -->
 <button aria-label="Scroll to top" id="scrollTopBtn">↑</button>
 <script>
-if (!window.location.search.includes("v=")) {
-  window.location.href = window.location.href + (window.location.href.includes('?') ? '&' : '?') + "v=" + Date.now();
-}
+(function() {
+  const url = new URL(window.location.href);
+  if (!url.searchParams.has("v")) {
+    url.searchParams.set("v", Date.now());
+    window.location.replace(url.toString());
+  }
+})();
 </script><script>
     const topBtn = document.getElementById('scrollTopBtn');
     window.addEventListener('scroll', () => {
