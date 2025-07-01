@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head><meta content="no-store" http-equiv="Cache-Control"/><meta content="no-cache" http-equiv="Pragma"/><meta content="0" http-equiv="Expires"/>
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>RedcellAI – Diagnostic AI Platform</title>
@@ -299,8 +299,8 @@
 <section class="section" id="team">
 <h2>Our Team</h2>
 <ul>
-<li><strong>Jubeam Lee (CEO)</strong> – AI product &amp; startup veteran. <a href="https://www.linkedin.com/in/jubeam-lee-a88b07106/" target="_blank">LinkedIn</a></li>
-<li><strong>Hyun-Ju Seo (COO/CTO)</strong> – SaaS &amp; ML operations expert. <a href="https://www.linkedin.com/in/hyun-ju-seo-7923ba3/" target="_blank">LinkedIn</a></li>
+<li><strong>Hyun-Ju Seo (CEO)</strong> – SaaS &amp; ML operations expert. <a href="https://www.linkedin.com/in/hyun-ju-seo-7923ba3/" target="_blank">LinkedIn</a></li>
+    <li><strong>Jubeam Lee (CTO)</strong> – AI product &amp; startup veteran. <a href="https://www.linkedin.com/in/jubeam-lee-a88b07106/" target="_blank">LinkedIn</a></li>
 <li><strong>Dr. Jaewoo Song (Clinical Advisor)</strong> – Professor of Laboratory Medicine, Yonsei University Hospital. <a href="https://www.linkedin.com/in/jaewoo-song-75b3b722/" target="_blank">LinkedIn</a></li>
 </ul>
 </section>
@@ -328,6 +328,10 @@
 <!-- Scroll-to-Top Button -->
 <button aria-label="Scroll to top" id="scrollTopBtn">↑</button>
 <script>
+if (!window.location.search.includes("v=")) {
+  window.location.href = window.location.href + (window.location.href.includes('?') ? '&' : '?') + "v=" + Date.now();
+}
+</script><script>
     const topBtn = document.getElementById('scrollTopBtn');
     window.addEventListener('scroll', () => {
       topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
